@@ -37,6 +37,13 @@
     animation: play-animation 500ms ease-out;
 }
 
+.cloud {
+position: absolute;    
+width: 550px;
+animation: rock-animation 20s infinite linear;
+
+}
+
 .rock{
 
     position: absolute;
@@ -48,7 +55,18 @@
 
 @keyframes rock-animation {
     from {
-        right: -80;
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -550px;
     }
 
     to {
@@ -57,9 +75,6 @@
 
 
 }
-
-
-
 
 
 @keyframes play-animation {
