@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 100px solid rgb(53, 39, 14);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgb(170, 8, 8), rgb(15, 1, 1));
+}
+
+#gameOverScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.content {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    /* Defina a altura da div pai aqui */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.content h1,
+h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.content button {
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+    height: 7.8rem;
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content button:hover {
+    cursor: pointer;
+    color: #FFFF00;
+    /* Branco */
+    background-color: rgba(139, 0, 0, 0.5);
+    /* Vermelho sangue com transparência */
+    transition-delay: 0.05s;
+}
+
+.player {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2px;
+}
+
+.jump {
+    animation: play-animation 500ms ease-out;
+}
+
+.cloud {
+    position: absolute;
+    width: 450px;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.rock {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    animation: rock-animation 1.6s infinite;
+}
+
+@keyframes rock-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes play-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}

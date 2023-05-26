@@ -1,101 +1,34 @@
-*{
+body {
     margin: 0;
     padding: 0;
+    display: flex;
+}
+
+.container {
+    width: 50%;
+    height: 100vh;
     box-sizing: border-box;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease;
+    /* Adicionando transição suave */
 }
 
+.container:nth-child(1) {
+    background-image: url(/imgs/jogo1.png);
+}
 
-  
+.container:nth-child(2) {
+    background-image: url(/imgs/jogo2.png);
+}
 
-.game-board{
+.link-container {
+    display: flex;
     width: 100%;
-    height: 639px;
-    border-bottom: 30px rgb(53, 39, 14);
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(#1f505c, #7c9096);
-    
 }
 
-#score {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    font-size: 20px;
-    color: rgb(233, 49, 49);
-    font-weight: bold;
-  }
-
-.play{
-    width: 300px;
-    position: absolute;
-    bottom: 0px;
-   
-}
-.jump {
-    animation: play-animation 500ms ease-out;
-}
-
-.cloud {
-position: absolute;    
-width: 550px;
-animation: rock-animation 20s infinite linear;
-
-}
-
-.rock{
-
-    position: absolute;
-    bottom: 0;
-    width: 200px;
-    right: -80px;
-    animation: rock-animation 1.8s infinite;
-}
-
-@keyframes rock-animation {
-    from {
-        right: -80px;
-    }
-
-    to {
-        right: 100%;
-    }
-
-}
-
-@keyframes cloud-animation {
-    from {
-        right: -550px;
-    }
-
-    to {
-        right: 100%;
-    }
-
-
-}
-
-
-@keyframes play-animation {
-    0%{
-        bottom:0;
-    }
-
-    
-    40%{
-        bottom: 180px;
-    }
-
-    50%{
-        bottom: 180px;
-    }
-
-    60%{
-        bottom: 180px;
-    }
-
-    100%{
-        bottom: 0;
-    }
+.container:hover {
+    filter: brightness(0.8);
+    /* Escurece a imagem em 80% */
 }

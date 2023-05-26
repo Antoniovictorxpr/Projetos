@@ -1,0 +1,48 @@
+body {
+    background: rgb(62, 61, 91);
+    background: linear-gradient(90deg, rgba(62, 61, 91, 1) 0%, rgba(57, 57, 103, 1) 54%, rgba(31, 51, 55, 1) 100%);
+}
+
+.cell {
+    font-family: 'Braah One', sans-serif;
+    color: rgb(233, 227, 227);
+    width: 120px;
+    height: 120px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 160px;
+    font-size: 80px;
+    cursor: pointer;
+
+}
+
+.title {
+    color: #ffffff;
+}
+
+#gameContainer {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 20px;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 360px;
+    margin: 0 auto;
+}
+
+#restartBtn {
+    color: #ffffff;
+    margin-top: 1rem;
+    font-size: 25px;
+    font-family: 'Press Start 2P', cursive;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    color: #000000f6;
+}

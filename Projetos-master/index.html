@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Projetos-master/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Slime jump</title>
+    <script defer src="js/script.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div class="game-board">
+
+        <div id="gameOverScreen">
+            <div class="content">
+                <h1>Game Over</h1>
+                <h2></h2>
+                <button onclick="reiniciarJogo()">Restart</button>
+            </div>
+        </div>
+
+        <img src="/Projetos-master/assets/images/rock.png" class="rock">
+        <img src="/Projetos-master/assets/images/player.png" class="player" id="player">
+        <img src="/Projetos-master/assets/images/clouds.png" class="cloud">
+
+    </div>
+
+    <audio id="soundGame">
+        <source src="/Projetos-master/assets/sounds/game.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="soundDefeat">
+        <source src="/Projetos-master/assets/sounds/perdeu.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="soundJump">
+        <source src="/Projetos-master/assets/sounds/jump.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+</body>
+
+</html>
+
+<script defer src="/Projetos-master/js/script.js">
